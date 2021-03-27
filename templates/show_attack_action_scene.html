@@ -1,0 +1,13 @@
+$def with (scene, form, text, next_scene)
+<h1>Сцена $scene.branch </h1>
+
+<pre>
+    $text
+</pre>
+<p>
+$if next_scene == 'victory' or next_scene == 'escape' or next_scene == 'death':
+    <form action="/attack" method="post">
+$else:
+    <form action="/attack" method="get">
+$:form.render()
+</form>

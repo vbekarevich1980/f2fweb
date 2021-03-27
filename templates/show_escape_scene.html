@@ -1,0 +1,18 @@
+$def with (scene)
+<h1>Сцена $scene.branch </h1>
+
+<pre>
+    $scene.branches[scene.branch]
+</pre>
+<h3>Ваш выбор?</h3>
+<p>
+
+<form action="/game" method="post">
+    $for i in range(len(scene.escape_ways[scene.branch])):
+        $if scene.escape_ways[scene.branch][i] in scene.deaths:
+            <p><button name="death" value=$scene.escape_ways[scene.branch][i]>$scene.escape_ways_descriptions[scene.branch][i]</button></p>
+        $elif scene.escape_ways[scene.branch][i] in scene.victories:
+            <p><button name="victory" value=$scene.escape_ways[scene.branch][i]>$scene.escape_ways_descriptions[scene.branch][i]</button></p>
+        $else:
+            <p><button name="story" value=$scene.escape_ways[scene.branch][i]>$scene.escape_ways_descriptions[scene.branch][i]</button></p>
+</form>

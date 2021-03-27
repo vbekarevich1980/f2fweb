@@ -1,0 +1,14 @@
+$def with (scene)
+<h1>Сцена $scene.branch </h1>
+
+<pre>
+    $scene.branches[scene.branch]
+</pre>
+<h3>Ваши действия</h3>
+<p>
+<form action="/game" method="post">
+    <p><button name="escape" value="1">Попробовать убежать</button></p>
+    <p><button name="attack" value="2">Атаковать Пожирателя</button></p>
+    <p><button name="3" value="3">Посмотреть уровень сил</button></p>
+    <p><button name="robodogs" value="4">Искать аптечку</button></p>
+</form>

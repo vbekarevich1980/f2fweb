@@ -1,0 +1,14 @@
+$def with (scene)
+<h1>Сцена $scene.branch </h1>
+
+<pre>
+    \n\tПан или пропал: Вы решились, собрав волю в кулак и последние силы, дать бой Пожирателю.\n
+    \n\tВзвесим силы: ваш уровень сил равен !$scene.hero.health! против !$scene.villain.health! у Пожирателя.\n
+    \tПри этом у вас всего $scene.hero.gun зарядов в бластере, а у него целых $scene.villain.gun ракет.\n
+    \n\tНу что ж, назад пути нет. Вы стреляете первым.
+</pre>
+<p>
+
+<form action="/attack" method="get">
+    <p><button>Пли!</button></p>
+</form>
